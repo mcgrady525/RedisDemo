@@ -18,35 +18,35 @@ namespace RedisDemo.Test
             var redisClient = new RedisWrapper();
 
             //add
-            redisClient.Add(testKey, "hello redis");
+            //redisClient.Add(testKey, "hello redis");
 
-            //get
+            ////get
             var result = redisClient.Get(testKey);
 
-            //update
-            if (!result.IsNullOrEmpty())
-            {
-                redisClient.Update(testKey, "hello redis update at 2017-10-30 10:49:16");
-            }
+            ////update
+            //if (!result.IsNullOrEmpty())
+            //{
+            //    redisClient.Update(testKey, "hello redis update at 2017-10-30 10:49:16");
+            //}
 
-            //remove
-            redisClient.Remove(testKey);
+            ////remove
+            ////redisClient.Remove(testKey);
 
 
-            //json
-            var m = new TestRedis
-            {
-                Id= 1,
-                Name= "zhangsan",
-                Address= new Address
-                {
-                    PostNumber= "111222",
-                    AddressDetail= "深圳市宝安区旭生大厦1213"
-                }
-            };
-            redisClient.Add<TestRedis>(testKey111, m);
+            ////json
+            //var m = new TestRedis
+            //{
+            //    Id= 1,
+            //    Name= "zhangsan",
+            //    Address= new Address
+            //    {
+            //        PostNumber= "111222",
+            //        AddressDetail= "深圳市宝安区旭生大厦1213"
+            //    }
+            //};
+            //redisClient.Add<TestRedis>(testKey111, m);
 
-            var result1 = redisClient.Get<TestRedis>(testKey111);
+            //var result1 = redisClient.Get<TestRedis>(testKey111);
             
             Console.ReadKey();
         }
