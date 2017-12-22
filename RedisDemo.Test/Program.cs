@@ -18,9 +18,9 @@ namespace RedisDemo.Test
             var redisClient = new RedisWrapper();
 
             //add
-            //redisClient.Add(testKey, "hello redis");
+            redisClient.Add(testKey, "hello redis");
 
-            ////get
+            //get
             var result = redisClient.Get(testKey);
 
             ////update
